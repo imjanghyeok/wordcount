@@ -1,0 +1,24 @@
+<body>
+<form method="POST">
+    {% csrf_token %}
+      <p>순서</p>
+      <label><input type="radio" name="sequence" value="ascending_key"> 가나다순(오름차순)</label>
+      <label><input type="radio" name="sequence" value="descending_key"> 가나다순(내림차순)</label>
+      <label><input type="radio" name="sequence" value="ascending_value"> 개수(오름차순)</label>
+      <label><input type="radio" name="sequence" value="descending_value"> 개수(내림차순)</label>
+      <p><input type="submit" value="적용">
+    </form>
+      
+    <h2>결과</h2>
+    {% for word, value in words %}
+        <p>단어: {{word}}: 개수: {{value}}</p>
+        <br>
+    {% endfor %}
+    <a href={% url 'main' %}>메인페이지로</a>
+</body>
+<style>
+    body {
+        text-align: center;
+    }
+
+</style>

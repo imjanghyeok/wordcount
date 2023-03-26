@@ -1,0 +1,18 @@
+<style>
+    body {
+        text-align: center;
+    }
+</style>
+
+
+<body>
+    <h2>Wordcount!</h2>
+    <form action={% url 'result' %} method='GET'>
+        <textarea rows="30" cols="60" name="text"></textarea>
+        <button type="submit">submit</button>
+    </form>
+
+    <a href={% url 'about' %}>about</a>
+</body>
+
+</html>
