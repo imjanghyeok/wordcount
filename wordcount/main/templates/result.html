@@ -1,8 +1,7 @@
 <body>
-<form method="POST">
-    {% csrf_token %}
+<form method="GET">
       <p>순서</p>
-      <label><input type="radio" name="sequence" value="ascending_key"> 가나다순(오름차순)</label>
+      <label><input type="radio" name="sequence" value="ascending_key" checked="checked"> 가나다순(오름차순)</label>
       <label><input type="radio" name="sequence" value="descending_key"> 가나다순(내림차순)</label>
       <label><input type="radio" name="sequence" value="ascending_value"> 개수(오름차순)</label>
       <label><input type="radio" name="sequence" value="descending_value"> 개수(내림차순)</label>
